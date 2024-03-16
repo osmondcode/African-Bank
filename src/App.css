@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&family=Rubik+Wet+Paint&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Rajdhani', Arial, Helvetica, sans-serif;
+}
+
+:root{
+  --bg-light: #fff;
+  --bg-dark: #000;
+}
+
+.bg-light{
+  background-color: var(--bg-light);
+}
+.bg-dark{
+  background-color: var(--bg-dark);
+}
+.text-light{
+  color: var(--bg-light);
+}
+.text-dark{
+  color: var(--bg-dark);
+}
+.spacing{
+  letter-spacing: 3px;
+}
+.gradient{
+  background: #444 linear-gradient(to right, transparent 50%, rgb(251 146 60 / var(--tw-bg-opacity)) 0);
+}
+
+.gradient::before{
+  content: '';
+  display: block;
+  height: 100%;
+  margin-left: 50%;
+  transform-origin: left;
+  border-radius: 0 100% 100% 0/50%;
+}
+
+.gradient::after{
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border-radius: 50%;
+  background: #222;
+}
+
+.sign-up-bg{
+  background: url(./components/Images//919ce0914f9bb2934d7555b7465c6464.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+button, input{
+  outline: none;
+}
+.no-spacing::placeholder{
+  letter-spacing: 1px;
+}
+.spacing{
+  letter-spacing: 5px;
+}
+
+.preLoader::after{
+  content: '';
+  width: 50px;
+  height: 50px;
+  border: 8px solid #e4e4e4;
+  border-top-color: rgb(251 146 60);
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+@keyframes loading {
+  0%{
+    transform: rotate(0turn)
+  }
+  100%{
+    transform: rotate(1turn)
+  }
+}
